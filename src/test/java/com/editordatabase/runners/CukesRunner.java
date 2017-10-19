@@ -7,7 +7,7 @@ import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-		plugin = "html:target/cucumber-reports",
+		plugin={"html:target/cucumber-reports","json:target/cucumber.json"},
 		features = "./src/test/resources/com/editordatabase/features", 
 		glue = "com/editordatabase/step_definitions"
 		,tags ="@Smoke" //"@EditorJDBC"
